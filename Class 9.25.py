@@ -24,3 +24,6 @@ def hi():
     return n
 
 main()
+
+def idontknow():
+    print("I don't know what to do")
