@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Little Inspiration</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      color: #20243a;
+      font: 16px/1.6 system-ui, sans-serif;
+      background: linear-gradient(135deg, #d8f3f0, #f7e6ff);
+    }
+    main {
+      width: min(100%, 520px);
+      padding: 2.5rem;
+      text-align: center;
+      background: #ffffffd9;
+      border: 1px solid #fff;
+      border-radius: 24px;
+      box-shadow: 0 18px 55px #34345a20;
+    }
+    .sparkle { font-size: 3rem; }
+    h1 { margin: .25rem 0; font-size: clamp(2rem, 8vw, 3rem); }
+    p { color: #62677d; }
+    button {
+      margin-top: 1rem;
+      padding: .8rem 1.2rem;
+      color: white;
+      font: inherit;
+      font-weight: 700;
+      background: #6658d3;
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    button:hover { background: #5144b6; }
+    button:focus-visible { outline: 3px solid #20243a; outline-offset: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="sparkle" aria-hidden="true">✨</div>
+    <h1>Hello, curious world!</h1>
+    <p id="message">A tiny corner of the web, ready for a little inspiration.</p>
+    <button type="button" id="inspire">Surprise me</button>
+  </main>
+  <script>
+    const ideas = [
+      'Make something small, then make it better.',
+      'Every great idea starts with a curious question.',
+      'Take a breath. You are right on time.',
+      'Today is a good day to try something new.'
+    ];
+    document.querySelector('#inspire').addEventListener('click', () => {
+      document.querySelector('#message').textContent = ideas[Math.floor(Math.random() * ideas.length)];
+    });
+  </script>
+</body>
+</html>
