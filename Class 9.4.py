@@ -1,6 +1,3 @@
-#string: "True" is not True
-word="say"
-print(word)
 
 #integer 
 a=1
